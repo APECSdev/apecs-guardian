@@ -74,7 +74,48 @@ jobs:
               run: |
                   set -euo pipefail
                   tag="${GITHUB_REF_NAME}"
+                  cat > release-notes.md <<'NOTES'
+                  **Crypto systems engineering, handled.**
+
+                  APECS Guardian handles crypto systems engineering — chain daemons, logs, telemetry, dashboards — so builders don't have to.
+
+                  ## What is Guardian?
+
+                  A read-only, hardened node monitor for crypto infrastructure. A single static binary auto-detects your chain daemons and reports live telemetry to your personal dashboard at `apecs.dev/guardian/<sessionid>`.
+
+                  **Monitored chains (auto-detected, read-only):** Dash · Bitcoin · Bitcoin Cash · Avalanche · Dogecoin · Litecoin
+
+                  ## Downloads
+
+                  | File | Platform |
+                  | --- | --- |
+                  | `apecs-windows-x86_64.exe` | Windows — single binary, no installer |
+                  | `apecs-linux-x86_64` | Linux — static binary |
+                  | `apecs-linux-x86_64.AppImage` | Linux — self-contained AppImage |
+
+                  Verify your download before running it:
+
+                  ```sh
+                  sha256sum -c SHA256SUMS.txt
+                  ```
+
+                  ## Quick start
+
+                  ```sh
+                  apecs run --key <your-apecs-key>
+                  ```
+
+                  The daemon prints your personal dashboard link. There is no inbound listener — the daemon polls **outbound** only.
+
+                  ## Security model
+
+                  1. **Read-only by default** — it observes and reports unless you pass `--allow-actions`.
+                  2. **Closed action set** — `node_status`, `node_logs`, `collect_metrics`, fixed at compile time. No shell, ever.
+                  3. **Signed actions only** — every action carries an Ed25519 signature; the daemon fails closed on anything forged, tampered, or expired.
+
+                  Source, build instructions, and the full security model: [APECSdev/apecs-guardian](https://github.com/APECSdev/apecs-guardian)
+                  NOTES
                   gh release create "$tag" dist/* \
                       --title "APECS Guardian $tag" \
-                      --notes "Built by self-hosted runner. Verify with SHA256SUMS.txt." \
+                      --notes-file release-notes.md \
                       --latest
