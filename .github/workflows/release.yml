@@ -115,7 +115,8 @@ jobs:
 
                   Source, build instructions, and the full security model: [APECSdev/apecs-guardian](https://github.com/APECSdev/apecs-guardian)
                   NOTES
+                  # Release title is the bare tag (e.g. 'v26.10.17'), per owner.
                   gh release create "$tag" dist/* \
-                      --title "APECS Guardian $tag" \
+                      --title "$tag" \
                       --notes-file release-notes.md \
                       --latest
