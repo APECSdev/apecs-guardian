@@ -68,3 +68,18 @@ Every rule cites a file.
 
 Do not duplicate this source into those repos; they consume the API + the
 signed-action envelope only.
+
+## 6. Product tiers (brand direction, ratified 2026-10-17)
+
+The Guardian brand has two tiers:
+
+- **Guardian** — this repo. The read-only monitor. Free.
+- **Guardian Angel** — the autonomous tier (paid, PRO). NOT YET BUILT.
+
+Guardian Angel's intelligence lives in the CONTROL PLANE, never in this
+daemon. The rule is: **AI proposes, the signature disposes.** An agent may
+watch telemetry and suggest or auto-issue actions, but this daemon's trust
+model does not change for it — closed `Action` enum, Ed25519 signature
+required, fail closed. New enum variants (e.g. `RestartDaemon`) may be added
+over time; a shell variant may NEVER be added. Do not add "AI" code to this
+repo; the angel is a control-plane feature.
