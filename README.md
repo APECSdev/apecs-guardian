@@ -1,9 +1,9 @@
 # APECS Guardian
 
-*Systems engineering, handled.*
+*Crypto systems engineering, handled.*
 
-**APECS Guardian handles the systems engineering — processes, logs, telemetry,
-dashboards — so builders don't have to.**
+**APECS Guardian handles crypto systems engineering — chain daemons, logs,
+telemetry, dashboards — so builders don't have to.**
 
 `apecs.exe` — the **APECS Guardian**: a read-only, hardened node monitor for
 top-L1 operators. A single static binary that registers your node with the
