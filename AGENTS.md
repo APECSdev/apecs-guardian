@@ -92,6 +92,12 @@ License NFTs (one per device, minted on the user's primary network) are
 managed by the Human Resources surface at `apecs.dev/hr`; the control plane
 verifies NFT ownership before signing Guru-tier actions.
 
+NFT chain selection is ON HOLD (operator decision, 2026-10-18): the
+operator is building a new network, RISCy (`https://riscy.network` — does
+not resolve yet, verified 2026-10-18), which may be incorporated into
+APECS when it launches later this year. Do not commit to a mint-chain
+matrix until that decision lands.
+
 Guru's intelligence lives in the CONTROL PLANE, never in this daemon. The
 rule is: **AI proposes, the signature disposes.** An agent may watch
 telemetry and suggest or auto-issue actions, but this daemon's trust model
