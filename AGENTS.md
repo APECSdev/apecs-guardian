@@ -71,10 +71,14 @@ signed-action envelope only.
 
 ## 6. Product tiers (brand direction, ratified 2026-10-17)
 
-The Guardian brand has two tiers:
+The Guardian brand has two tiers (ratified 2026-10-17):
 
-- **Guardian** — this repo. The read-only monitor. Free.
-- **Guardian Angel** — the autonomous tier (paid, PRO). NOT YET BUILT.
+- **Guardian** — this repo. READ-ONLY: reporting and suggestive. It watches,
+  reports, and may RECOMMEND an action — a human (or an explicit signed
+  control-plane request) executes. Free.
+- **Guardian Angel** — the AUTONOMOUS tier (paid, PRO): agentic management.
+  It acts on the operator's behalf within the signed-action plane.
+  NOT YET BUILT.
 
 Guardian Angel's intelligence lives in the CONTROL PLANE, never in this
 daemon. The rule is: **AI proposes, the signature disposes.** An agent may
