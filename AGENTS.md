@@ -69,21 +69,29 @@ Every rule cites a file.
 Do not duplicate this source into those repos; they consume the API + the
 signed-action envelope only.
 
-## 6. Product tiers (brand direction, ratified 2026-10-17)
+## 6. Product tiers (brand direction, ratified 2026-10-17; rebranded 2026-10-18)
 
-The Guardian brand has two tiers (ratified 2026-10-17):
+The brand is two AI-generated characters with avatars and bios (public
+assets and copy live in the apecs.dev repo: `public/img/characters/`,
+`pages/guardian/index.vue`). Tiers are licensed PER DEVICE:
 
-- **Guardian** — this repo. READ-ONLY: reporting and suggestive. It watches,
-  reports, and may RECOMMEND an action — a human (or an explicit signed
-  control-plane request) executes. Free.
-- **Guardian Angel** — the AUTONOMOUS tier (paid, PRO): agentic management.
-  It acts on the operator's behalf within the signed-action plane.
-  NOT YET BUILT.
+- **Guardian — "The Watcher"** — this repo. READ-ONLY: reporting and
+  suggestive. It watches, reports, and may RECOMMEND an action — a human
+  (or an explicit signed control-plane request) executes. Free tier:
+  monitoring ONLY, every device, no seat key. Creed: "See everything.
+  Touch nothing."
+- **Guru — "The Ascended"** — the AUTONOMOUS tier (paid, PRO): agentic
+  management. It acts on the operator's behalf within the signed-action
+  plane. Licensed per device (one signed seat each). NOT YET BUILT.
+  Creed: "AI proposes, the signature disposes."
 
-Guardian Angel's intelligence lives in the CONTROL PLANE, never in this
-daemon. The rule is: **AI proposes, the signature disposes.** An agent may
-watch telemetry and suggest or auto-issue actions, but this daemon's trust
-model does not change for it — closed `Action` enum, Ed25519 signature
-required, fail closed. New enum variants (e.g. `RestartDaemon`) may be added
-over time; a shell variant may NEVER be added. Do not add "AI" code to this
-repo; the angel is a control-plane feature.
+The former name **"Guardian Angel" is retired** — do not use it in new
+copy; the Pro tier is Guru.
+
+Guru's intelligence lives in the CONTROL PLANE, never in this daemon. The
+rule is: **AI proposes, the signature disposes.** An agent may watch
+telemetry and suggest or auto-issue actions, but this daemon's trust model
+does not change for it — closed `Action` enum, Ed25519 signature required,
+fail closed. New enum variants (e.g. `RestartDaemon`) may be added over
+time; a shell variant may NEVER be added. Do not add "AI" code to this
+repo; Guru is a control-plane feature.
