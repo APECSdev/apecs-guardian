@@ -1,4 +1,4 @@
-# apecs-guardian
+# APECS Guardian
 
 `apecs.exe` — the **APECS Guardian**: a read-only, hardened node monitor for
 top-L1 operators. A single static binary that registers your node with the
@@ -57,13 +57,6 @@ Reports to `/v1/guardian/*` on the `APECSdev/api` Worker, authenticated with
 `x-apecs-key` (the same key discipline as the ADB agent). The web dashboard is
 served from `apecs.dev`.
 
-## Provenance
-
-Rebranded and substantially refactored from an earlier, unmaintained internal
-project. Architecture (session + monitor + read-only sys probes) retained;
-the free-text remote-exec channel was removed and replaced with the signed,
-allowlisted action plane above. See `AGENTS.md` for the security invariants.
-
 ## License
 
-MIT.
+MIT — see [LICENSE](LICENSE). Copyright APECS Dev.
