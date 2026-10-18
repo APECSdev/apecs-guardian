@@ -5,3 +5,8 @@ Cargo.lock.bak
 *.pem
 *.key
 .env
+
+# Release staging (CI artifacts)
+dist/
+dist-appimage/
+packaging/AppDir/
