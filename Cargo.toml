@@ -1,7 +1,7 @@
 # Cargo.toml
 [package]
 name = "apecs"
-version = "0.1.0"
+version = "26.10.17"
 authors = ["APECS Dev"]
 description = "apecs.exe — the APECS Guardian: a read-only, hardened node monitor for top-L1 operators."
 homepage = "https://apecs.dev"
