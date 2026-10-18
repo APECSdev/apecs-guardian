@@ -30,7 +30,9 @@ jobs:
 
             - name: Toolchain
               run: |
+                  # GITHUB_PATH applies to SUBSEQUENT steps; export for this one.
                   echo "$HOME/.cargo/bin" >> "$GITHUB_PATH"
+                  export PATH="$HOME/.cargo/bin:$PATH"
                   rustc --version
                   cargo --version
                   rustup target list --installed
