@@ -88,6 +88,10 @@ assets and copy live in the apecs.dev repo: `public/img/characters/`,
 The former name **"Guardian Angel" is retired** — do not use it in new
 copy; the Pro tier is Guru.
 
+License NFTs (one per device, minted on the user's primary network) are
+managed by the Human Resources surface at `apecs.dev/hr`; the control plane
+verifies NFT ownership before signing Guru-tier actions.
+
 Guru's intelligence lives in the CONTROL PLANE, never in this daemon. The
 rule is: **AI proposes, the signature disposes.** An agent may watch
 telemetry and suggest or auto-issue actions, but this daemon's trust model
