@@ -1,4 +1,4 @@
-# AGENTS.md — APECSdev/apecs-guardian
+# AGENTS.md — APECSdev/apecs-ops
 
 Operating rules for editing this repository. This is a **node monitor that runs
 on operators' machines** — the trust bar is the highest of any APECS repo.
@@ -10,7 +10,7 @@ Every rule cites a file.
 | --- | --- | --- |
 | Binary | `apecs` (Windows: `apecs.exe`) | `Cargo.toml` `[[bin]]` |
 | Lang | Rust 2021, tokio async | `Cargo.toml`, `src/main.rs` |
-| Repo | `github.com:APECSdev/apecs-guardian` (PRIVATE) | `gh repo view` |
+| Repo | `github.com:APECSdev/apecs-ops` (PUBLIC; renamed from `apecs-guardian` 2026-10-18) | `gh repo view` |
 | Backend | `https://apecs.dev/v1/guardian/` | `src/comm/api.rs` `DEFAULT_BASE` |
 | Auth | `x-apecs-key` header on every POST | `src/comm/api.rs` |
 | Chains | Dash, Bitcoin, Bitcoin Cash, Avalanche, Dogecoin, Litecoin | `src/chains.rs` `Chain::ALL` |

@@ -113,7 +113,7 @@ jobs:
                   2. **Closed action set** — `node_status`, `node_logs`, `collect_metrics`, fixed at compile time. No shell, ever.
                   3. **Signed actions only** — every action carries an Ed25519 signature; the daemon fails closed on anything forged, tampered, or expired.
 
-                  Source, build instructions, and the full security model: [APECSdev/apecs-guardian](https://github.com/APECSdev/apecs-guardian)
+                  Source, build instructions, and the full security model: [APECSdev/apecs-ops](https://github.com/APECSdev/apecs-ops)
                   NOTES
                   # Release title is the bare tag (e.g. 'v26.10.17'), per owner.
                   gh release create "$tag" dist/* \
